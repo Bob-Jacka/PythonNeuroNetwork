@@ -1,8 +1,8 @@
 from core.NeuralData import NeuroArc
-from entities.NNetwork import Network
+from entities.NNetwork_tensorflow import tensorflow_nn
 
 path_to_image: str = '../core/data/three.png'
-network = Network()
+network = tensorflow_nn()
 network.load_model(NeuroArc.dense)
 network.init_test_data(test_mode=True)
 #

@@ -23,8 +23,8 @@ accuracy: str = Metrics.Accuracy.value
 opt = Adam(learning_rate=0.02)
 
 
-class Network:
-    model: Sequential = ...
+class tensorflow_nn:
+    model: Sequential
     model_name: str
     model_arc: NeuroArc
 
