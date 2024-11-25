@@ -1,8 +1,11 @@
-from entities.NNetwork import Network
+from core.NeuralData import NeuroArc
+from entities.NNetwork_tensorflow import tensorflow_nn
 
-path_to_file_to_save: str = '../core/data/TwoRemaster2.png'
-network = Network(test_mode=False, one_image_to_recognize=path_to_file_to_save)
-network.load_model()
-# network.train_model(after_train_save=True)
-# network.work_model()
-network.predict_number()
+path_to_image: str = '../core/data/three.png'
+network = tensorflow_nn()
+network.load_model(NeuroArc.dense)
+network.init_test_data(test_mode=True)
+#
+# network.train_model(after_process_save=True)
+# network.work_model(after_process_save=True)
+network.predict_number(image_to_recognize=path_to_image)
